@@ -1,4 +1,3 @@
-let question = Math.floor(Math.random()*30)
 
 document.getElementById('start').onclick = function(){
     let question = Math.floor(Math.random()*30)
@@ -11,5 +10,9 @@ document.getElementById('submit').onclick = function(){
     ;
     let correct = Number(document.getElementById('question').textContent);
 correct = correct*correct
-    if(answer == correct){}
+    if(answer == correct){
+        document.getElementById('result').textContent = 'CORRECT'
+    } else{
+        document.getElementById('result').textContent = 'WRONG'
+    }
 }
