@@ -10,10 +10,11 @@ document.getElementById('submit').onclick = function(){
     power = base * base;
     let answer = document.getElementById('answer').value;
     if(answer == power){
+        document.getElementById('whole').style.background = 'green';
         document.getElementById('result').textContent = 'CORRECT!';
         score++;
     }    else{
-        document.body.style.background = 'red';
+        document.getElementById('whole').style.background = 'red';
         document.getElementById('result').textContent = 'WRONG!!!!';
         strike--;
         document.getElementById('strikes').value = strike;
