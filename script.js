@@ -3,6 +3,8 @@ document.getElementById('start').onclick = function(){
     let question = Math.floor(Math.random()*30)
     document.getElementById('question').textContent = question
     document.getElementById('whole').style.background=' rgb(60, 70, 78)';
+    let power = question * question;
+    console.log(power);
 }
 
 document.getElementById('submit').onclick = function(){
@@ -10,9 +12,11 @@ document.getElementById('submit').onclick = function(){
     let score = 0;
     let base = document.getElementById('question').textContent;
     power = base * base;
+    
     let answer = document.getElementById('answer').value;
     if(answer == power){
         document.getElementById('whole').style.background = 'green';
+        document.getElementById('result').style.color  = 'aliceblue';
         document.getElementById('result').textContent = 'CORRECT!';
         score++;
         document.getElementById('score').innerHTML= score;
