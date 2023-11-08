@@ -8,8 +8,9 @@ document.getElementById('start').onclick = function(){
 }
 
 document.getElementById('submit').onclick = function(){
-    let strike = 3;
-    let score = 0;
+    let strike = document.getElementById('strikes').value;
+    let point = 1;
+    let score = document.getElementById('score').value;
     let base = document.getElementById('question').textContent;
     power = base * base;
     
@@ -18,13 +19,15 @@ document.getElementById('submit').onclick = function(){
         document.getElementById('whole').style.background = 'green';
         document.getElementById('result').style.color  = 'aliceblue';
         document.getElementById('result').textContent = 'CORRECT!';
-        score++;
-        document.getElementById('score').innerHTML= score;
+        score = Number(score);
+         score = score+ point;
+        document.getElementById('score').value= score;
     }    else{
         document.getElementById('whole').style.background = 'red';
         document.getElementById('result').textContent = 'WRONG!!!!';
-        strike--;
-        document.getElementById('strikes').innerHTML= strike;
+        strike = Number(strike);
+       strike = strike-point;
+        document.getElementById('strikes').textContent= strike;
 
     }
 }
