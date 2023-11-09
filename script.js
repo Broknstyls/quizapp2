@@ -9,26 +9,26 @@ document.getElementById('start').onclick = function(){
 }
 
 document.getElementById('submit').onclick = function(){
-    let strike = document.getElementById('strikes').value;
-    let point = 1;
-    let score = document.getElementById('score').value;
+    let strike = document.getElementById('strikes').innerHTML;
+    strike = Number(strike);
+    let score = document.getElementById('score').innerHTML;
+    score = Number(score);
     let base = document.getElementById('question').textContent;
     power = base * base;
+  
     
     let answer = document.getElementById('answer').value;
+    console.log(answer);
     if(answer == power){
         document.getElementById('whole').style.background = 'green';
         document.getElementById('result').style.color  = 'aliceblue';
         document.getElementById('result').textContent = 'CORRECT!';
-        score = Number(score);
-         score = score+ point;
-        document.getElementById('score').value= score;
+    
+        document.getElementById('score').innerHTML= score++;
     }    else{
         document.getElementById('whole').style.background = 'red';
         document.getElementById('result').textContent = 'WRONG!!!!';
-        strike = Number(strike);
-       strike = strike-point;
-        document.getElementById('strikes').textContent= strike;
+        document.getElementById('strikes').textContent= strike--;
 
     }
 }
