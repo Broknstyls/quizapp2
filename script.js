@@ -1,4 +1,4 @@
-
+let scores = [];
 document.getElementById('start').onclick = function(){
     let question = Math.floor(Math.random()*30)
     document.getElementById('question').textContent = question
@@ -32,9 +32,15 @@ document.getElementById('submit').onclick = function(){
         document.getElementById('strikes').textContent= strike;
 
     }
-    if(strikes== 0){
-        document.getElementById('result').textContent = 'GAMEOVER'
-        
-        
+    if(document.getElementById('strikes').textContent == 0){
+        document.getElementById('question').textContent = 'GAMEOVER'
+        let endscore = document.getElementById('score').innerHTML;
+      scores.push(endscore);
+let highscore = Math.max(scores);
+console.log(highscore);    
+    } else if(document.getElementById('strikes').textContent < 0)
+    {
+        document.getElementById('strikes').textContent = 3;
+        document.getElementById('score').textContent = 0;
     }
 }
