@@ -32,5 +32,9 @@ document.getElementById('submit').onclick = function(){
         document.getElementById('strikes').textContent= strike;
 
     }
-    
+    if(strikes== 0){
+        document.getElementById('result').textContent = 'GAMEOVER'
+        
+        
+    }
 }
