@@ -38,9 +38,15 @@ document.getElementById('submit').onclick = function(){
       scores.push(endscore);
 let highscore = Math.max(scores);
 console.log(highscore);    
-    } else if(document.getElementById('strikes').textContent < 0)
+    } else if(document.getElementById('strikes').textContent < 0 )
     {
         document.getElementById('strikes').textContent = 3;
         document.getElementById('score').textContent = 0;
+    }
+    document.getElementById('reset').onclick = function(){
+        document.getElementById('strikes').innerHTML = 3;
+        document.getElementById('score').innerHTML= 0;
+        document.getElementById('whole').style.background=' rgb(60, 70, 78)'
+        document.getElementById('question').textContent = 'RANDOM NUMBER'
     }
 }
