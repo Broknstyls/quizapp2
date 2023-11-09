@@ -5,6 +5,7 @@ document.getElementById('start').onclick = function(){
     document.getElementById('whole').style.background=' rgb(60, 70, 78)';
     let power = question * question;
     console.log(power);
+    document.getElementById('answer').value= '';
 }
 
 document.getElementById('submit').onclick = function(){
