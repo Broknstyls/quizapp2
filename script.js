@@ -23,12 +23,14 @@ document.getElementById('submit').onclick = function(){
         document.getElementById('whole').style.background = 'green';
         document.getElementById('result').style.color  = 'aliceblue';
         document.getElementById('result').textContent = 'CORRECT!';
-    
-        document.getElementById('score').innerHTML= score++;
+    score++;
+        document.getElementById('score').innerHTML= score;
     }    else{
         document.getElementById('whole').style.background = 'red';
         document.getElementById('result').textContent = 'WRONG!!!!';
-        document.getElementById('strikes').textContent= strike--;
+        strike--;
+        document.getElementById('strikes').textContent= strike;
 
     }
+    
 }
