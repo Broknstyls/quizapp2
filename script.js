@@ -37,7 +37,7 @@ document.getElementById('submit').onclick = function(){
         let endscore = document.getElementById('score').innerHTML;
       scores.push(endscore);
 let highscore = Math.max(scores);
-console.log(highscore);    
+    document.getElementById('highscore').innerHTML = highscore;    
     } else if(document.getElementById('strikes').textContent < 0 )
     {
         document.getElementById('strikes').textContent = 3;
