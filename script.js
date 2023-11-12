@@ -9,6 +9,7 @@ document.getElementById('start').onclick = function(){
 }
 
 document.getElementById('submit').onclick = function(){
+
     let strike = document.getElementById('strikes').innerHTML;
     strike = Number(strike);
     let score = document.getElementById('score').innerHTML;
